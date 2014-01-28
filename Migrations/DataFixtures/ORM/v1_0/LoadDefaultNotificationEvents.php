@@ -1,14 +1,13 @@
 <?php
 
-namespace Oro\Bundle\NotificationBundle\DataFixtures\ORM;
+namespace Oro\Bundle\NotificationBundle\Migrations\DataFixtures\ORM\v1_0;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
 use Oro\Bundle\NotificationBundle\Entity\Event;
 
-class LoadDefaultNotificationEvents extends AbstractFixture implements OrderedFixtureInterface
+class LoadDefaultNotificationEvents extends AbstractFixture
 {
     /**
      * {@inheritDoc}
@@ -26,13 +25,5 @@ class LoadDefaultNotificationEvents extends AbstractFixture implements OrderedFi
             $manager->persist($event);
         }
         $manager->flush();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getOrder()
-    {
-        return 120;
     }
 }
