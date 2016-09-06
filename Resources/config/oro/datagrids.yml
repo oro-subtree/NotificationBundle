@@ -1,4 +1,4 @@
-datagrid:
+datagrids:
     mass-notification-grid:
         options:
           entity_pagination: true
